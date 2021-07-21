@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "d93bc682-351b-4635-b50f-68d6a9ba99d9",
+		"name": "Person Api DIO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Gustavo\",\r\n    \"lastName\":\"Muzell\",\r\n    \"cpf\":\"493.083.548-83\",\r\n    \"birthDate\":\"20-12-1999\",\r\n    \"phones\": [\r\n        {\r\n            \"type\":\"MOBILE\",\r\n            \"number\":\"(11)941844325\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/people",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/people",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Person by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/people/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Gustavo\",\r\n    \"lastName\": \"Muzell\",\r\n    \"cpf\": \"493.083.548-83\",\r\n    \"birthDate\": \"01-02-2004\",\r\n    \"phones\": [\r\n        {\r\n            \"id\": 1,\r\n            \"type\": \"COMMERCIAL\",\r\n            \"number\": \"(11)947911154\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/people/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Person by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/people/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
